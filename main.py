@@ -16,10 +16,10 @@ for movie in movies:
     movie_names.append(movie.text.strip().replace('"',' ')) ##strips the movie names of the html tags and other unnecessary elements.
 
 with open("100movies.txt", "w", encoding='utf-8') as f:
-    for movie in movie_names:
-        if "12: The Godfather Part II" in movie:
-            movie = movie.replace(":", ")")
-        f.write(movie + "\n")
+    for movie in movie_names: #find the each movie within the list
+        if "12: The Godfather Part II" in movie: #finds the specific movie within movies
+            movie = movie.replace(":", ")") ##replaces the typo with the correct format, replaces old entry with new one.
+        f.write(movie + "\n") ##writes the list of movies
 
 
 
